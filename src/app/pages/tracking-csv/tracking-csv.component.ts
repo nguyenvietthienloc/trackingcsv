@@ -48,6 +48,7 @@ export class TrackingCsvComponent {
         }
         this.accountFileUpload.push(value);
       }
+      this.accountFileUpload = [{account_id:'sandbox',parent_account_id:'', name:'sandbox', status:''},...this.accountFileUpload]
       console.log(this.accountFileUpload)
     })
   }

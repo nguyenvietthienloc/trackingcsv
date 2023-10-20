@@ -30,9 +30,9 @@
         <dxi-column dataField="name"></dxi-column>
         <dxi-column dataField="status"></dxi-column>
       </dx-data-grid> -->
-          <dx-tree-list [dataSource]="accountFileUpload" [rootValue]="'sandbox'" keyExpr="account_id"
+          <dx-tree-list [dataSource]="accountFileUpload" [rootValue]="''" keyExpr="account_id"
             parentIdExpr="parent_account_id" [autoExpandAll]="expanded" [allowColumnReordering]="true"
-            [allowColumnResizing]="true" [columnAutoWidth]="true">
+            [allowColumnResizing]="true" [columnAutoWidth]="true" [showRowLines]="true" [expandedRowKeys]="[1]">
             <dxo-toolbar>
               <dxi-item location="after">
                 <dx-button [text]="expanded ? 'Collapse All' : 'Expand All'" [width]="136"
@@ -42,7 +42,7 @@
               <dxi-item name="searchPanel"></dxi-item>
             </dxo-toolbar>
 
-            <dxi-column dataField="parent_account_id"></dxi-column>
+            <!-- <dxi-column dataField="parent_account_id"></dxi-column> -->
             <dxi-column dataField="account_id"></dxi-column>
             <dxi-column dataField="name"></dxi-column>
             <dxi-column dataField="status"></dxi-column>
